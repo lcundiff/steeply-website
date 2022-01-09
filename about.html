@@ -11,8 +11,7 @@
     <!-- lib styles -->
     <link rel="stylesheet" href="dist/zuck.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./core.css">
-    <link rel="stylesheet" href="./sidebar.css">
+
 
 
     <!-- lib skins -->
@@ -21,41 +20,242 @@
     <link rel="stylesheet" href="dist/skins/facesnap.css">
     <link rel="stylesheet" href="dist/skins/snapssenger.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+      header {
+        height: 80px; 
+        background-color: #47748b;
+      }
+      img {
+        border-radius: 12px;
+      }
+      img.bordered {
+        border: 20px solid #47748b;
+        border-radius: 40px;
+      }
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        height: 100px;
+        width: 100px;
+        background-size: 100%, 100%;
+        border-radius: 50%;
+        background-image: none;
+      }
 
+      .carousel-control-next-icon:after
+      {
+        content: '>';
+        font-size: 55px;
+        color: white;
+      }
+
+      .carousel-control-prev-icon:after {
+        content: '<';
+        font-size: 55px;
+        color: white;
+      }
+    .wrapper {
+        display: flex;
+        width: 100%;
+    }
+    #sidebar {
+        /* don't forget to add all the previously mentioned styles here too */
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 999;
+        background: #7386D5;
+        color: #fff;
+        transition: all 0.3s;
+    }
+    #content {
+      width: calc(100% - 250px);
+      min-height: 100vh;
+      transition: all 0.3s;
+      top:80px;
+      right:0;
+      position: absolute;
+      padding-bottom:100px;
+    }
+    #content.active {
+      width:100%;
+    }
+      a[data-toggle="collapse"] {
+          position: relative;
+      }
+
+      .dropdown-toggle::after {
+          display: block;
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          transform: translateY(-50%);
+      }
+      #sidebar.active {
+          margin-left: -250px;
+      }   
+    p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1em;
+      font-weight: 300;
+      line-height: 1.7em;
+      color: #999;
+    }
+
+    a, a:hover, a:focus {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+
+
+    #sidebar .sidebar-header {
+        padding: 20px;
+        background: #6d7fcc;
+    }
+
+    #sidebar ul.components {
+        padding: 20px 0;
+        border-bottom: 1px solid #47748b;
+    }
+
+    #sidebar ul p {
+        color: #fff;
+        padding: 10px;
+    }
+
+    #sidebar ul li a {
+        padding: 10px;
+        font-size: 1.1em;
+        display: block;
+    }
+    #sidebar ul li a:hover {
+        color: #7386D5;
+        background: #fff;
+    }
+
+    #sidebar ul li.active > a, a[aria-expanded="true"] {
+        color: #fff;
+        background: #6d7fcc;
+    }
+    ul ul a {
+        font-size: 0.9em !important;
+        padding-left: 30px !important;
+        background: #6d7fcc;
+    }
+    .fill-height {
+      height:100%; 
+    }
+    .carousel-item-next {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .carousel-item img {
+      padding:40px;
+      border-radius: 40px;
+      max-height:75%;
+      width:100%;
+      max-width:500px;
+      align-self: center;
+    }
+    .carousel-item-prev {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .carousel-item.active {
+      text-align: center;
+      display: flex !important; 
+      flex-direction: column;
+      justify-content: center;
+    }
+    .center-inside {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .border-right {
+      border-right: black solid 1px; 
+    }
+    .blue-banner {
+      background-color: #47748b;
+      left:0;
+      right:0;
+      position: absolute;
+      color:white;
+    }
+    .white-banner {
+      background-color: rgb(246, 250, 255);
+      left:0;
+      right:0;
+      position: absolute;
+    }
+    .purple-banner {
+      background-color:#7386D5;
+      left:0;
+      right:0;
+      position: absolute;
+      color:white;
+    }
+    .white-banner.padded {
+      height:100%;
+      padding:100px; 
+    }
+    .blue-banner p {
+      color:#fff;
+    }
+    .purple-banner p {
+      color:#fff;
+    }
+    .banner-holder {
+      height:420px;
+      position: relative;
+      
+    }
+    footer {
+    }
+    </style>
   </head>
 
   <body>
     <!-- Top menu on small screens -->
 
     <div class="wrapper">
-      <!--#include virtual="./sidebar.html" -->
+      <!-- Sidebar/menu -->
       <nav id="sidebar" class="active">
         <div class="sidebar-header">
             <h3>OT And Cancer</h3>
         </div>
 
         <ul class="list-unstyled components">
-          <li>
-            <a href="./index.html">Home</a>
-        </li>            <li class="active">
-              <a href="#aboutSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">About</a>
-              <ul class="collapse list-unstyled" id="aboutSubmenu">
-                  <li>
-                      <a href="./ot.html">OT & Cancer</a>
-                  </li>
-                  <li>
-                      <a href="./team.html">Our Team</a>
-                  </li>
-                  <li>
-                    <a href="./project.html">Capstone Project</a>
-                </li>
-              </ul>
+            <p>Pages</p>
+            <li class="active">
+                <a href="index.html" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="#">Survey</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="./about.html">About</a>
+            </li>
+            <li>
+                <a href="./ot.html">OT & Cancer</a>
+            </li>
+            <li>
+                <a href="./team.html">The Team</a>
             </li>
             <li>
               <a href="./ref.html">References</a>
           </li>
         </ul>
-      </nav>
+    </nav>
 
       <!-- Page Content -->
     <div id="content" class="active">
@@ -187,12 +387,40 @@
     <br>
     <footer>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+      <style>
+      body {margin:0;}
+
+      .icon-bar {
+        width: 100%;
+        background-color: #555;
+        overflow: auto;
+      }
+
+      .icon-bar a {
+        float: left;
+        width: 20%;
+        text-align: center;
+        padding: 12px 0;
+        transition: all 0.3s ease;
+        color: white;
+        font-size: 36px;
+      }
+
+      .icon-bar a:hover {
+        background-color: #000;
+      }
+
+      .active-footer {
+        background-color: #47748b;
+      }
+      </style>
+      <body>
 
       <div class="icon-bar position-fixed fixed-bottom">
-        <a href="#"><i class="fa fa-home"></i></a> 
+        <a class="active-footer " href="#"><i class="fa fa-home"></i></a> 
         <a href="#"><i class="fa fa-pencil-alt"></i></a> 
         <a href="#"><i class="fa fa-capsules"></i></a> 
-        <a href="social.html"><i class="fa fa-user-friends"></i></a>
+        <a href="#"><i class="fa fa-user-friends"></i></a>
         <a href="#"><i class="fa fa-brain"></i></a> 
       </div>
       <span></span>
@@ -276,7 +504,33 @@
           )
         ]
       });
+      $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+            $('#content').toggleClass('active');
+        });
+      });
     </script>
-    <script src="./src/sidebar.js"></script>
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+       
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+      
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+      
+      </script>
   </body>
 </html>

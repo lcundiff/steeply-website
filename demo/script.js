@@ -18,7 +18,7 @@ var getCurrentSkin = function() {
   var skin = location.href.split('skin=')[1];
 
   if (!skin) {
-    skin = 'Snapgram';
+    skin = 'Snapssenger';
   }
 
   if (skin.indexOf('#') !== -1) {

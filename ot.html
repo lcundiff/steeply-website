@@ -1,0 +1,100 @@
+  <head>
+    <title>zuck.js</title>
+
+    <link rel="icon" href="ICON.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+
+    <!-- demo styles -->
+    <link rel="stylesheet" href="demo/style.css">
+
+    <!-- lib styles -->
+    <link rel="stylesheet" href="dist/zuck.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./core.css">
+    <link rel="stylesheet" href="./sidebar.css">
+    <!-- lib skins -->
+    <link rel="stylesheet" href="dist/skins/snapgram.css">
+    <link rel="stylesheet" href="dist/skins/vemdezap.css">
+    <link rel="stylesheet" href="dist/skins/facesnap.css">
+    <link rel="stylesheet" href="dist/skins/snapssenger.css">
+
+  </head>
+  <body>
+    <!-- Top menu on small screens -->
+    <div class="wrapper">
+      <!-- Sidebar/menu -->
+      <nav id="sidebar" class="active">
+        <div class="sidebar-header">
+            <h3>OT And Cancer</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+          <li>
+            <a href="./index.html">Home</a>
+        </li>            <li class="active">
+              <a href="#aboutSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">About</a>
+              <ul class="collapse list-unstyled" id="aboutSubmenu">
+                  <li>
+                      <a href="./ot.html">OT & Cancer</a>
+                  </li>
+                  <li>
+                      <a href="./team.html">Our Team</a>
+                  </li>
+                  <li>
+                    <a href="./project.html">Capstone Project</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="./ref.html">References</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Page Content -->
+    <div id="content" class="active">
+      <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+        <div class="w3-container w3-top w3-padding-16">
+          <span class="w3-left w3-padding">LOGO HERE</span>
+          <a  id="sidebarCollapse" href="javascript:void(0)" class="w3-btn w3-xlarge" onclick="">☰</a>
+        </div>
+      </header>
+      <div class="blue-back">
+        <div class="">
+          <div class="row">
+            <div class="col-sm-9 col-md-8 col-lg-6 center-inside">  
+              <img class="img-fluid fill-height" src="imgs/ot.jpg">
+            </div>
+            <div class="col-sm-3 col-md-4 col-lg-6 beige-back row center-inside">
+              <div class="">
+                <h1>What is OT?</h1>
+                <p class="center-inside">OT info</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    <br>
+    <footer>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+      <div class="icon-bar position-fixed fixed-bottom">
+        <a href="#"><i class="fa fa-home"></i></a> 
+        <a href="#"><i class="fa fa-pencil-alt"></i></a> 
+        <a href="#"><i class="fa fa-capsules"></i></a> 
+        <a href="#"><i class="fa fa-user-friends"></i></a>
+        <a href="#"><i class="fa fa-brain"></i></a> 
+      </div>
+      <span></span>
+    </footer>
+  </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="./src/sidebar.js"></script>
+  </body>
+</html>

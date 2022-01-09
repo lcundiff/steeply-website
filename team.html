@@ -1,0 +1,122 @@
+<head>
+  <title>zuck.js</title>
+
+  <link rel="icon" href="ICON.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+
+  <!-- demo styles -->
+  <link rel="stylesheet" href="demo/style.css">
+
+  <!-- lib styles -->
+  <link rel="stylesheet" href="dist/zuck.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./core.css">
+  <link rel="stylesheet" href="./sidebar.css">
+  <!-- lib skins -->
+  <link rel="stylesheet" href="dist/skins/snapgram.css">
+  <link rel="stylesheet" href="dist/skins/vemdezap.css">
+  <link rel="stylesheet" href="dist/skins/facesnap.css">
+  <link rel="stylesheet" href="dist/skins/snapssenger.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+  <!-- Top menu on small screens -->
+  <div class="wrapper">
+    <!-- Sidebar/menu -->
+    <nav id="sidebar" class="active">
+      <div class="sidebar-header">
+          <h3>OT And Cancer</h3>
+      </div>
+
+      <ul class="list-unstyled components">
+        <li>
+          <a href="./index.html">Home</a>
+      </li>            <li class="active">
+            <a href="#aboutSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">About</a>
+            <ul class="collapse list-unstyled" id="aboutSubmenu">
+                <li>
+                    <a href="./ot.html">OT & Cancer</a>
+                </li>
+                <li>
+                    <a href="./team.html">Our Team</a>
+                </li>
+                <li>
+                  <a href="./project.html">Capstone Project</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="./ref.html">References</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Page Content -->
+    <div id="content" class="active">
+      <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+        <div class="w3-container w3-top w3-padding-16">
+          <span class="w3-left w3-padding">LOGO HERE</span>
+          <a  id="sidebarCollapse" href="javascript:void(0)" class="w3-btn w3-xlarge" onclick="">☰</a>
+        </div>
+      </header>
+      <div class="">
+        <div class="blue-banner">
+          <div class="container">
+            <div class="row center-inside">
+              <h1>About The Team</h1>
+            </div>
+            <div class="row center-inside fill-height">
+              <div class="col-sm border-right padded">
+                <h3>Rebecca Cundiff</h3>
+                <p> position</p>
+                <img class="rounded-circle img-thumbnail img-responsive" src="imgs/occupational.jpg">
+                <p class="margin-top">info</p>
+              </div>
+              <div class="col-sm border-right padded">
+                <h3>UF</h3>
+                <p>UF info</p>
+                <img class="rounded-circle img-thumbnail img-responsive" src="imgs/occupational.jpg">
+              </div>
+              <div class="col-sm border-right padded">
+                <h3>Other</h3>
+                <p>Other info</p>
+                <img class="rounded-circle img-thumbnail img-responsive" src="imgs/occupational.jpg">
+              </div>
+              <div class="col-sm border-right padded">
+                <h3>OT Person</h3>
+                <p>OT Person info</p>
+                <img class="rounded-circle img-thumbnail img-responsive" src="imgs/occupational.jpg">
+              </div>
+              <div class="col-sm padded">
+                <h3>OT Person</h3>
+                <p>OT Person info</p>
+                <img class="rounded-circle img-thumbnail img-responsive" src="imgs/occupational.jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <br>
+    <footer>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+      <div class="icon-bar position-fixed fixed-bottom">
+        <a class="active-footer " href="#"><i class="fa fa-home"></i></a> 
+        <a href="./social.html"><i class="fa fa-pencil-alt"></i></a> 
+        <a href="./social.html"><i class="fa fa-capsules"></i></a> 
+        <a href="./social.html"><i class="fa fa-user-friends"></i></a>
+        <a href="./social.html"><i class="fa fa-brain"></i></a> 
+      </div>
+    </footer>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $('#sidebarCollapse').on('click', function () {
+          $('#sidebar').toggleClass('active');
+          $('#content').toggleClass('active');
+      });
+    });
+  </script>
+  <script src="./src/sidebar.js"></script>
+</body>
